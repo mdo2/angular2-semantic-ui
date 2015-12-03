@@ -1,7 +1,7 @@
 {
-  "name": "angular2-webpack-starter",
+  "name": "angular2-semantic-ui",
   "version": "0.0.0",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E), Karma, Protractor, Jasmine, TypeScript, and Webpack by AngularClass",
+  "description": "An Angular 2 components hub using Semantic UI frontend framework",
   "main": "",
   "scripts": {
     "build": "npm run webpack --colors --display-error-details --display-cached",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/mdo2/angular2-semantic-ui.git"
   },
-  "author": "gdi2290 <github@gdi2290.com>",
+  "author": "Francisco Javier Arribas Fernández <arribasjavier@gmail.com> (https://github.com/mdo2)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/mdo2/angular2-semantic-ui/issues"
   },
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "homepage": "https://github.com/mdo2/angular2-semantic-ui.git",
   "dependencies": {
     "@reactivex/rxjs": "5.0.0-alpha.7",
     "angular2": "2.0.0-alpha.46",
