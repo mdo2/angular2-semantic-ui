@@ -178,7 +178,7 @@ function env(configEnv) {
 }
 
 function getBanner() {
-  return 'Angular2 Webpack Starter v'+ pkg.version +' by @gdi2990 from @AngularClass';
+  return 'Angular2 Semantic UI Components v'+ pkg.version +' by Francisco Javier Arribas Fernández from @mdo2';
 }
 
 function root(args) {
