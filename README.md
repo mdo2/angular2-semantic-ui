@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mdo2/angular2-semantic-ui.svg)](https://travis-ci.org/mdo2/angular2-semantic-ui)
+
 # Angular 2 Semantic UI components
 This project is a hub of angular 2 components that use Semantic UI for style
 and add functionality.
