@@ -9,7 +9,3 @@ before_install:
   - npm install --global webpack-dev-server
   - npm install --global karma-cli
   - npm install --global protractor
-
-"scripts": {
-  "test": "npm run test"
-},
