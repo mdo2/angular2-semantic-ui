@@ -1,11 +1,13 @@
 language: node_js
 node_js:
-  - "4.1"
-  - "4.0"
-  - "iojs"
+  - "4"
 
 before_install:
   - npm install --global webpack
   - npm install --global webpack-dev-server
   - npm install --global karma-cli
   - npm install --global protractor
+  - npm install --global tsd
+
+before_script:
+  - tsd install
