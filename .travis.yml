@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "4.1"
+  - "4.0"
+  - "iojs"
+
+before_install:
+  - npm install --global webpack
+  - npm install --global webpack-dev-server
+  - npm install --global karma-cli
+  - npm install --global protractor
+
+"scripts": {
+  "test": "npm run test"
+},
