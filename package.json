@@ -36,6 +36,11 @@
   "dependencies": {
     "@reactivex/rxjs": "5.0.0-alpha.7",
     "angular2": "2.0.0-alpha.46",
+    "body-parser": "^1.14.1",
+    "connect-history-api-fallback": "^1.1.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
     "reflect-metadata": "0.1.2",
     "zone.js": "0.5.8"
   },
