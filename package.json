@@ -42,6 +42,7 @@
     "express": "^4.13.3",
     "morgan": "^1.6.1",
     "reflect-metadata": "0.1.2",
+    "semantic-ui": "^2.1.6",
     "zone.js": "0.5.8"
   },
   "devDependencies": {
