@@ -19,7 +19,7 @@ exports.config = {
     }
   },
 
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.47.1.jar',
+  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.48.2.jar',
 
   specs: [
     'test/**/*.e2e.js'
