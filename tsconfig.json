@@ -23,6 +23,7 @@
     "./src/app/components/dropdown/DropdownComponent.ts",
     "./src/typings/_custom.d.ts",
     "./src/typings/browser.d.ts",
+    "./src/typings/jquery.d.ts",
     "./src/typings/webpack.d.ts",
     "./test/app/app.spec.ts",
     "./test/injector.spec.ts",
