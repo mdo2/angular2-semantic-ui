@@ -1,4 +1,5 @@
 {
+  "version": "1.6.2",
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -12,7 +13,26 @@
     "listFiles": false,
     "outDir": "dist"
   },
+  "filesGlob": [
+    "./**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
   "files": [
-    "src/app/bootstrap.ts"
-  ]
+    "./src/app/app.ts",
+    "./src/app/bootstrap.ts",
+    "./src/app/components/dropdown/DropdownComponent.ts",
+    "./src/typings/_custom.d.ts",
+    "./src/typings/browser.d.ts",
+    "./src/typings/webpack.d.ts",
+    "./test/app/app.spec.ts",
+    "./test/injector.spec.ts",
+    "./test/sanity_test.spec.ts",
+    "./typings/angular2/angular2.d.ts",
+    "./typings/tsd.d.ts"
+  ],
+  "compileOnSave": false,
+  "exclude": [],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
