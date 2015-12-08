@@ -21,6 +21,7 @@
     "./src/app/app.ts",
     "./src/app/bootstrap.ts",
     "./src/app/components/dropdown/DropdownComponent.ts",
+    "./src/app/directives/SemanticComponent.ts",
     "./src/typings/_custom.d.ts",
     "./src/typings/browser.d.ts",
     "./src/typings/webpack.d.ts",
