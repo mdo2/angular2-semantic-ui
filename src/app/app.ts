@@ -25,12 +25,15 @@ import { DropdownComponent } from "./components/dropdown/DropdownComponent";
   <header></header>
 
   <main>
-    <sc-dropdown></sc-dropdown>
+    <sc-dropdown [data]='[{ label: "Male", value: "male" },"female"]'></sc-dropdown>
   </main>
 
   <footer></footer>
   `
 })
 export class App {
-
+  data = [
+    { label: "Male", value: "male" },
+    { label: "Female", value: "female" }
+  ];
 }

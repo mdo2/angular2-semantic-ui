@@ -1,40 +1,67 @@
 /*
  * Dropdown  Semantic UI component
  */
-import { Directive, Component, View, ElementRef } from "angular2/angular2";
+import { Directive, Component, View, ElementRef, Input, Output, EventEmitter } from "angular2/angular2";
 import { SemanticComponentDirective } from "../../directives/SemanticComponent";
 
 @Component({
-  selector: "sc-dropdown",
+  selector: "sc-dropdown"
+})
+@View({
   directives: [ SemanticComponentDirective ],
-  styles: [],
+  styles: [`
+    .text{
+      text-transform: capitalize;
+    }
+  `],
   template: `
-  <div sc-component sc-name="dropdown" [sc-config]="scConfig" class="ui selection dropdown">
-    <input type="hidden" name="gender">
+  <div class="ui dropdown selection"
+    sc-component
+    sc-name="dropdown"
+    [sc-config]="scConfig"
+  >
+    <input type="hidden" name="dropdown-value">
     <i class="dropdown icon"></i>
-    <div class="default text">Gender</div>
+    <div class="default text">{{ placeholder }}</div>
     <div class="menu">
-      <div class="item" data-value="male">Male</div>
-      <div class="item" data-value="female">Female</div>
+      <div *ng-for="#item of data" class="item"
+        [attr.data-value]="item.value ? item.value : item"
+      >
+        <span class="text" >{{ item.label ? item.label : (item.value ? item.value : item) }}</span>
+      </div>
     </div>
   </div>
-  <span>Value: {{ value }}</span>
   `
 })
 export class DropdownComponent {
 
   //Semantic Component
-  scConfig: Object = {};
+  scConfig: Object = {
+    onChange: this.onChange.bind(this)
+  };
+
+  @Input("placeholder") placeholder: string = "Select an option";
+  @Input("data") data: any[];
+  @Output("onChange") changeEmitter = new EventEmitter();
 
   //Properties
   $elem: any;
-  value: any;
+  $choice: any;
+  current: string;
+  previous: string;
 
   constructor(elem: ElementRef){
     this.$elem = $(elem.nativeElement);
   }
 
+  onChange(value, text, $choice): void{
+    this.previous = this.current != this.previous ? this.current : this.previous;
+    this.current = value;
+    this.$choice = $choice;
+    this.changeEmitter.next(this.current);
+  }
+
   // onInit(){
-  // 
+  //
   // }
 }
