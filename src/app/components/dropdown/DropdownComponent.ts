@@ -10,9 +10,7 @@ import { SemanticComponentDirective } from "../../directives/SemanticComponent";
 @View({
   directives: [ SemanticComponentDirective ],
   styles: [`
-    .text{
-      text-transform: capitalize;
-    }
+
   `],
   template: `
   <div class="ui dropdown selection"

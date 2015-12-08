@@ -19,21 +19,34 @@ import { DropdownComponent } from "./components/dropdown/DropdownComponent";
     DropdownComponent
   ],
   // Our list of styles in our component. We may add more to compose many styles together
-  styles: [``],
+  styles: [`
+    .item .icon:first-child:last-child{
+      margin: 0px;
+    }
+  `],
   // Every Angular template is first compiled by the browser before Angular runs it"s compiler
   template: `
-  <header></header>
+  <header class="red">
+    <div class="ui red inverted menu">
+      <div class="header item">
+        Angular 2 Semantic UI Components
+      </div>
+      <div class="right menu">
+        <a class="item white" target="_blank" href="https://github.com/mdo2/angular2-semantic-ui">
+          <i class="github icon large"></i>
+        </a>
+      </div>
+    </div>
+  </header>
 
   <main>
-    <sc-dropdown [data]='[{ label: "Male", value: "male" },"female"]'></sc-dropdown>
+    <dic class="container">
+      <sc-dropdown></sc-dropdown>
+    </div>
   </main>
 
   <footer></footer>
   `
 })
 export class App {
-  data = [
-    { label: "Male", value: "male" },
-    { label: "Female", value: "female" }
-  ];
 }
