@@ -16,18 +16,14 @@ import { DropdownComponent } from "./components/dropdown/DropdownComponent";
     SiteNavbarComponent,
     DropdownComponent
   ],
-  styles: [`
-    .item .icon:first-child:last-child{
-      margin: 0px;
-    }
-  `],
+  styles: [],
   template: `
-  <header>
+  <header class="">
     <sc-site-navbar></sc-site-navbar>
   </header>
 
   <main>
-    <dic class="container">
+    <dic class="ui container">
       <sc-dropdown></sc-dropdown>
     </div>
   </main>

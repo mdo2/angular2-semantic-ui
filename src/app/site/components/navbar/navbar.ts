@@ -8,7 +8,11 @@ import { Directive, Component, View } from "angular2/angular2";
 })
 @View({
   directives: [],
-  styles: [],
+  styles: [`
+    .item .icon:first-child:last-child{
+      margin: 0px;
+    }
+  `],
   templateUrl: "components/navbar/navbar.html"
 })
 export class SiteNavbarComponent {
