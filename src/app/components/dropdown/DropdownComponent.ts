@@ -1,7 +1,7 @@
 /*
  * Dropdown  Semantic UI component
  */
-import { Directive, Component, View, ElementRef, Input, Output, EventEmitter } from "angular2/angular2";
+import { Directive, Component, View, ElementRef, Input, Output, EventEmitter } from "angular2/core";
 import { SemanticComponentDirective } from "../../directives/SemanticComponent";
 
 @Component({
@@ -9,9 +9,7 @@ import { SemanticComponentDirective } from "../../directives/SemanticComponent";
 })
 @View({
   directives: [ SemanticComponentDirective ],
-  styles: [`
-
-  `],
+  styles: [],
   template: `
   <div class="ui dropdown selection"
     sc-component
@@ -22,7 +20,7 @@ import { SemanticComponentDirective } from "../../directives/SemanticComponent";
     <i class="dropdown icon"></i>
     <div class="default text">{{ placeholder }}</div>
     <div class="menu">
-      <div *ng-for="#item of data" class="item"
+      <div *ngFor="#item of data" class="item"
         [attr.data-value]="item.value ? item.value : item"
       >
         <span class="text" >{{ item.label ? item.label : (item.value ? item.value : item) }}</span>
@@ -40,7 +38,7 @@ export class DropdownComponent {
 
   @Input("placeholder") placeholder: string = "Select an option";
   @Input("data") data: any[];
-  @Output("onChange") changeEmitter = new EventEmitter();
+  @Output("on-change") changeEmitter = new EventEmitter();
 
   //Properties
   $elem: any;
@@ -58,8 +56,4 @@ export class DropdownComponent {
     this.$choice = $choice;
     this.changeEmitter.next(this.current);
   }
-
-  // onInit(){
-  //
-  // }
 }

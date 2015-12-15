@@ -3,9 +3,11 @@
 /*
  * Providers provided by Angular
  */
-import {bootstrap, FORM_PROVIDERS, ELEMENT_PROBE_PROVIDERS} from 'angular2/angular2';
-import {ROUTER_PROVIDERS} from 'angular2/router';
-import {HTTP_PROVIDERS} from 'angular2/http';
+ import {bootstrap} from 'angular2/bootstrap';
+ import {FORM_PROVIDERS} from "angular2/common";
+ import {ELEMENT_PROBE_PROVIDERS} from "angular2/platform/browser";
+ import {ROUTER_PROVIDERS} from 'angular2/router';
+ import {HTTP_PROVIDERS} from 'angular2/http';
 
 /*
  * App Component

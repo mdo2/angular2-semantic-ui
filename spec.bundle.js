@@ -10,8 +10,7 @@
 */
 Error.stackTraceLimit = Infinity;
 require('reflect-metadata');
-require('angular2/test');
-require('angular2/mock');
+require('angular2/testing');
 
 /*
   Ok, this is kinda crazy. We can use the the context method on
@@ -33,5 +32,5 @@ testContext.keys().forEach(testContext);
 
 // Select BrowserDomAdapter.
 // see https://github.com/AngularClass/angular2-webpack-starter/issues/124
-var domAdapter = require('angular2/src/core/dom/browser_adapter').BrowserDomAdapter;
+var domAdapter = require('angular2/src/platform/browser/browser_adapter').BrowserDomAdapter;
 domAdapter.makeCurrent();

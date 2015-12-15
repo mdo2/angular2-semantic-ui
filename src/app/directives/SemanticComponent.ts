@@ -1,12 +1,12 @@
 /*
  * Common Semantic UI component directive
  */
-import { Directive, ElementRef, Input } from "angular2/angular2";
+import { Directive, ElementRef, Input, OnInit } from "angular2/core";
 
 @Directive({
   selector: "[sc-component]"
 })
-export class SemanticComponentDirective {
+export class SemanticComponentDirective implements OnInit{
 
   // Properties
   $elem: any;
@@ -19,7 +19,7 @@ export class SemanticComponentDirective {
     this.$elem = $(elem.nativeElement);
   }
 
-  onInit(){
+  ngOnInit(){
     if ( this.name && typeof this.$elem[this.name] == "function" ){
       this.$elem[this.name](this.config);
     }

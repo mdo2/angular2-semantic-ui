@@ -3,7 +3,7 @@
  * Top Level Component
  */
 
-import {Directive, Component, View} from "angular2/angular2";
+import { Component, View } from "angular2/core";
 
 import { SiteNavbarComponent } from "./site/components/navbar/navbar";
 
@@ -12,6 +12,8 @@ import { DropdownComponent } from "./components/dropdown/DropdownComponent";
 
 @Component({
   selector: "sc-app",
+})
+@View({
   directives: [
     SiteNavbarComponent,
     DropdownComponent
@@ -23,7 +25,7 @@ import { DropdownComponent } from "./components/dropdown/DropdownComponent";
   </header>
 
   <main>
-    <dic class="ui container">
+    <div class="ui container">
       <sc-dropdown></sc-dropdown>
     </div>
   </main>

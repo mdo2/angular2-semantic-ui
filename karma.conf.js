@@ -1,5 +1,7 @@
 // @AngularClass
 
+webpack = require("webpack");
+
 module.exports = function(config) {
   var _config = {
 
@@ -33,7 +35,7 @@ module.exports = function(config) {
     },
 
     webpack: {
-      
+
       resolve: {
         root: __dirname,
         extensions: ['','.ts','.js','.json'],
@@ -56,7 +58,13 @@ module.exports = function(config) {
         ]
       },
       stats: { colors: true, reasons: true },
-      debug: false
+      debug: false,
+      plugins: [
+    		new webpack.ProvidePlugin({
+    			"$": "jquery",
+    			"jQuery": "jquery"
+    		})
+      ]
     },
 
     webpackServer: {

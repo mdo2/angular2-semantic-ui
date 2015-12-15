@@ -1,7 +1,7 @@
 /*
  * Site Navbar component
  */
-import { Directive, Component, View } from "angular2/angular2";
+import { Directive, Component, View } from "angular2/core";
 
 @Component({
   selector: "sc-site-navbar"

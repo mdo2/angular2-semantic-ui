@@ -24,12 +24,9 @@
     "./src/app/directives/SemanticComponent.ts",
     "./src/app/site/components/navbar/navbar.ts",
     "./src/typings/_custom.d.ts",
-    "./src/typings/browser.d.ts",
-    "./src/typings/webpack.d.ts",
     "./test/app/app.spec.ts",
-    "./test/injector.spec.ts",
+    "./test/app/components/dropdown/DropdownComponent.spec.ts",
     "./test/sanity_test.spec.ts",
-    "./typings/angular2/angular2.d.ts",
     "./typings/tsd.d.ts"
   ],
   "compileOnSave": false,
