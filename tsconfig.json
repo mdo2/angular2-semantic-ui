@@ -23,9 +23,11 @@
     "./src/app/components/dropdown/DropdownComponent.ts",
     "./src/app/directives/SemanticComponent.ts",
     "./src/app/site/components/navbar/navbar.ts",
+    "./src/app/vendor.ts",
     "./src/typings/_custom.d.ts",
     "./test/app/app.spec.ts",
     "./test/app/components/dropdown/DropdownComponent.spec.ts",
+    "./test/injector.spec.ts",
     "./test/sanity_test.spec.ts",
     "./typings/tsd.d.ts"
   ],

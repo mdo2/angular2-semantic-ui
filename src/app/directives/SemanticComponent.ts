@@ -6,7 +6,7 @@ import { Directive, ElementRef, Input, OnInit } from "angular2/core";
 @Directive({
   selector: "[sc-component]"
 })
-export class SemanticComponentDirective implements OnInit{
+export class SemanticComponentDirective implements OnInit {
 
   // Properties
   $elem: any;
@@ -15,12 +15,12 @@ export class SemanticComponentDirective implements OnInit{
   @Input("sc-config") config: any;
   @Input("sc-name") name: string;
 
-  constructor(elem: ElementRef){
+  constructor(elem: ElementRef) {
     this.$elem = $(elem.nativeElement);
   }
 
-  ngOnInit(){
-    if ( this.name && typeof this.$elem[this.name] == "function" ){
+  ngOnInit() {
+    if ( this.name && typeof this.$elem[this.name] === "function" ) {
       this.$elem[this.name](this.config);
     }
   }

@@ -46,12 +46,12 @@ export class DropdownComponent {
   current: string;
   previous: string;
 
-  constructor(elem: ElementRef){
+  constructor(elem: ElementRef) {
     this.$elem = $(elem.nativeElement);
   }
 
-  onChange(value, text, $choice): void{
-    this.previous = this.current != this.previous ? this.current : this.previous;
+  onChange(value, text, $choice): void {
+    this.previous = this.current !== this.previous ? this.current : this.previous;
     this.current = value;
     this.$choice = $choice;
     this.changeEmitter.next(this.current);

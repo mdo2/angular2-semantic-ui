@@ -9,7 +9,10 @@
  * all here! Crazy huh. So we need to do some setup
 */
 Error.stackTraceLimit = Infinity;
+require('phantomjs-polyfill');
+require('core-js');
 require('reflect-metadata');
+require('zone.js');
 require('angular2/testing');
 
 /*
@@ -32,5 +35,5 @@ testContext.keys().forEach(testContext);
 
 // Select BrowserDomAdapter.
 // see https://github.com/AngularClass/angular2-webpack-starter/issues/124
-var domAdapter = require('angular2/src/platform/browser/browser_adapter').BrowserDomAdapter;
-domAdapter.makeCurrent();
+var domAdapter = require('angular2/src/platform/browser/browser_adapter');
+domAdapter.BrowserDomAdapter.makeCurrent();
